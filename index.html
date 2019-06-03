@@ -1,0 +1,101 @@
+<html>
+<head>
+    <style>
+      body  
+        {
+    margin:0;
+            padding: 0;
+        background-color: #124590;
+        }
+        div
+        {
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+        }
+    div span
+        {
+            width: 20px;
+            height: 20px;
+            border-radius: 100%;
+            background-color: white;
+            display: block;
+            float: left;
+            margin: 0 5px;
+            
+        }
+        div span:not(:last-child)
+        {
+            
+            animation: an 1s linear infinite;
+        }
+        div span:last-child
+        {
+            animation: jmp 1s linear infinite;
+        }
+        @keyframes an
+        {
+            0%
+            {
+                transform: translateX(0px);
+            }
+            100%
+            {
+                transform: translateX(30px);
+            }
+    
+        }
+        @keyframes jmp
+        {
+            0%
+            {
+                transform: translate(0px,0px);
+            }
+            10%
+            {
+            transform:translate(10px,-10px);
+            }
+            20%
+            {
+            transform:translate(20px,10px);
+            }
+            30%
+            {
+             transform:translate(30px,-50px);
+            }
+            70%
+            {
+             transform:translate(-150px,-50px);
+            }
+            80%
+            {
+             transform:translate(-140px,10px);
+            }
+            90%
+            {
+             transform:translate(-130px,-10px);
+            }
+            100%
+            {
+            transform:translate(-120px,0px);
+            }
+            
+            
+        }
+    </style>
+    
+    </head>
+<body>
+    <div>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+
+    </div>
+    
+    
+    </body>
+</html>
